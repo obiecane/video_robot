@@ -1,7 +1,9 @@
+from typing import Any
+
 from mediautils import MetaInfo
 
 
-class VideoMetaInfo(MetaInfo):
+class VideoMetaInfo(MetaInfo.MetaInfo):
 
     def __init__(self):
         super().__init__()
@@ -21,4 +23,7 @@ class VideoMetaInfo(MetaInfo):
         self.rotate = None
         # 视频中包含的音频信息
         self.musicMetaInfo = None
+
+    def __str__(self):
+        return "VideoMetaInfo(filename=%s, duration=%s)" % (self.filename, self.duration)
 

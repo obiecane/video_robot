@@ -1,7 +1,7 @@
 from mediautils import MetaInfo
 
 
-class AudioMetaInfo(MetaInfo):
+class AudioMetaInfo(MetaInfo.MetaInfo):
     def __init__(self):
         super().__init__()
         # 音频时长, 单位：毫秒
